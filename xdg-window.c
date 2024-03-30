@@ -141,7 +141,8 @@ int main(int argc, char** argv)
     if (decoration_manager != NULL) {
         struct zxdg_toplevel_decoration_v1 *win_decor =
             zxdg_decoration_manager_v1_get_toplevel_decoration(decoration_manager, xdg_toplevel);
-        zxdg_toplevel_decoration_v1_set_mode(win_decor, ZXDG_TOPLEVEL_DECORATION_V1_MODE_SERVER_SIDE);
+        // SSD is default if decoration_manager exists
+        //zxdg_toplevel_decoration_v1_set_mode(win_decor, ZXDG_TOPLEVEL_DECORATION_V1_MODE_SERVER_SIDE);
     }
 
     int width = 200;
